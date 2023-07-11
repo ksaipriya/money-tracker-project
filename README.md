@@ -1,3 +1,32 @@
+# How to deploy to github
+
+1. npm install gh-pages --save-dev
+2. create a git repo int github, in terminal enter git init
+3. package.json changes:
+
+on the top: 
+  "homepage":"http://ksaipriya.github.io/money-tracker-project",
+in scripts:
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+
+4. git add .
+   git commit -m "first commit"
+
+5. git branch -M main
+   git remote add origin https://github.com/ksaipriya/money-tracker-project.git
+   git push -u origin main
+   
+6. npm run deploy
+7. new branch will be created in github , navigate to settings->pages and check the link provided where the application will be hosted, after a while the webiste will be displayed
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
